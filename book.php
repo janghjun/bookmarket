@@ -11,7 +11,9 @@
     require "./menu.php";
 
     try{
-      $id = $_GET["id"];
+      $id = null;
+      isset($_GET["id"]);
+        $id = $_GET["id"];
 
       $book = getBookById($id);
       if($book == null)
